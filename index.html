@@ -1,12 +1,40 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Place SearchBox</title>
-    <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly" defer></script>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Basic styling for map */
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        background-color: #fff;
+        padding: 0 11px 0 13px;
+        width: 400px;
+        font-size: 15px;
+        text-overflow: ellipsis;
+      }
+    </style>
   </head>
   <body>
     <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
     <div id="map"></div>
-    <script src="./script.js"></script>
+
+    <!-- Load Google Maps JS with your API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly" defer></script>
+    <!-- Your compiled script -->
+    <script src="script.js"></script>
   </body>
 </html>
